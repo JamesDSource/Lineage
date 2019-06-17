@@ -1,0 +1,1 @@
+global.GRAV = 0.3;
