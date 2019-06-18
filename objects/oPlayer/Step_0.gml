@@ -6,4 +6,4 @@
 #region states
 	if(state == PLAYERSTATE.FREE) player_state_free();
 #endregion 
-if(hsp != 0) image_xscale = sign(hsp);
+if(hsp != 0) image _xscale = sign(hsp);

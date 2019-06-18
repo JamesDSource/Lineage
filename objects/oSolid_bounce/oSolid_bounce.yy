@@ -1,38 +1,28 @@
 {
-    "id": "2b14c658-01ee-4715-8929-40b9f6fa22d8",
+    "id": "ad17319c-3878-4801-82b7-2cb98bbacbd6",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oGame_controller",
+    "name": "oSolid_bounce",
     "eventList": [
         {
-            "id": "4b730eb6-71d5-4d6d-9cc5-5164451504ad",
+            "id": "1a6edee6-2da4-45b9-93d0-3dcc862b4626",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 2,
+            "eventtype": 3,
+            "m_owner": "ad17319c-3878-4801-82b7-2cb98bbacbd6"
+        },
+        {
+            "id": "7547c61a-1d28-4ed7-bd6c-3589455e0af2",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "2b14c658-01ee-4715-8929-40b9f6fa22d8"
-        },
-        {
-            "id": "27e48bd2-72e8-4a45-b97b-fa8d1c251601",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 10,
-            "eventtype": 7,
-            "m_owner": "2b14c658-01ee-4715-8929-40b9f6fa22d8"
-        },
-        {
-            "id": "b799a5f6-be34-41e0-9b10-852c83bc1ee8",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 27,
-            "eventtype": 9,
-            "m_owner": "2b14c658-01ee-4715-8929-40b9f6fa22d8"
+            "m_owner": "ad17319c-3878-4801-82b7-2cb98bbacbd6"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",

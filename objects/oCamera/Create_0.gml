@@ -12,3 +12,7 @@ else follow = noone;
 target_x = 0;
 target_y = 0;
 cam_slow = 25;
+
+shake_magnitude = 0;
+shake_frames = 0;
+shake_remain = 0;

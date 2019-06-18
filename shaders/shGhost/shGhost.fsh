@@ -1,5 +1,5 @@
 //
-// Simple passthrough fragment shader
+// blue scales, increases transparency of image
 //
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
