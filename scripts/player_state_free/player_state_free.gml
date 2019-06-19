@@ -24,3 +24,7 @@
 	x += hsp;
 	y += vsp;
 #endregion
+#region actions
+	//swings weapon
+	//coming soon when I animate the bitch
+#endregion

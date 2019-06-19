@@ -1,1 +1,1 @@
-screen_shake(1,8);
+swap_weapon("zweihander");
