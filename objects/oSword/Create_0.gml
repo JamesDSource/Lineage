@@ -11,8 +11,12 @@ enum EQUIPT
 	ZWEIHANDER,	
 	
 }
+equipt_length = 2;
+equipt_num = 0;
 
 is_attacking = false;
+sword_offset_x = 0;
+sword_offset_y = 10;
 weapon = ds_map_create();
 ds_map_add(weapon, "damage", 0);
 ds_map_add(weapon, "recovery_frames", 0);
