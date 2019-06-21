@@ -25,6 +25,19 @@
 	y += vsp;
 #endregion
 #region actions
-	//swings weapon
-	//coming soon when I animate the bitch
+	if(mouse_pressed_left && !instance_exists(oSlash))
+	{
+		with(instance_create_layer(oSword.x,oSword.y,"hits", oSlash))	
+		{
+			friendly = true; 
+			image_angle = point_direction(x,y,mouse_x,mouse_y);
+			damage = ds_map_find_value(oSword.weapon, "damage");
+			x += lengthdir_x(ds_map_find_value(oSword.weapon, "blade_offset"), image_angle);
+			y += lengthdir_y(ds_map_find_value(oSword.weapon, "blade_offset"), image_angle);
+		}
+	}
+#endregion
+#region animations
+	if(hsp != 0 && skeleton_animation_get() != "run") skeleton_animation_set("run");
+	else if(hsp == 0 && skeleton_animation_get() != "idle") skeleton_animation_set("idle");
 #endregion

@@ -2,7 +2,7 @@ movement_speed = 3;
 vsp = 0;
 hsp = 0; 
 grav = global.GRAV;
-jump_speed = -10;
+jump_speed = -5;
 
 key_a = false;
 key_d = false;
@@ -17,3 +17,6 @@ enum PLAYERSTATE
 	
 	
 }
+
+skeleton_animation_mix("run", "idle", 0.10);
+skeleton_animation_mix("idle", "run", 0.10);
