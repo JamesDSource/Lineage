@@ -17,6 +17,14 @@ enum PLAYERSTATE
 	
 	
 }
+equipt = EQUIPT.None;
+enum EQUIPT
+{
+	None,
+	Rapier,
+	Zweihander
+	
+}
 
 skeleton_animation_mix("run", "idle", 0.10);
 skeleton_animation_mix("idle", "run", 0.10);

@@ -63,14 +63,6 @@
             }
         },
         {
-            "Key": "08121326-6533-483c-9379-eb3342952b7f",
-            "Value": {
-                "id": "6780a76f-739e-4b7b-87e1-cf17fc94e35e",
-                "resourcePath": "objects\\oSlash\\oSlash.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "09cfca56-fd0a-4c73-94f9-276ea3c898a7",
             "Value": {
                 "id": "17c24080-6566-4900-8924-0f93bec3c98e",
@@ -84,22 +76,6 @@
                 "id": "0f37503c-4a1b-4365-b150-32a6c9cd5ad3",
                 "resourcePath": "shaders\\shGhost\\shGhost.yy",
                 "resourceType": "GMShader"
-            }
-        },
-        {
-            "Key": "10df3a40-ff66-4b28-9ade-71bae52c9acb",
-            "Value": {
-                "id": "d1a52383-26e4-450d-9c70-0c5d3e1f22e9",
-                "resourcePath": "sprites\\sZweihander\\sZweihander.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "1e556511-af3f-4443-9293-a50e6eb3fd71",
-            "Value": {
-                "id": "927b2a59-ffd2-423e-ba87-c9572a00c763",
-                "resourcePath": "objects\\oSword\\oSword.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -138,16 +114,8 @@
             "Key": "30b916b8-3ad0-4922-af7f-064b51e14025",
             "Value": {
                 "id": "ead185d1-377c-493a-8cd8-e8562456eb9f",
-                "resourcePath": "objects\\oAdvisary\\oAdvisary.yy",
+                "resourcePath": "objects\\oDamageable\\oDamageable.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "31883bd4-2591-4115-ae84-867720f41394",
-            "Value": {
-                "id": "fc60c96a-f52c-414c-8419-686fdddf0de7",
-                "resourcePath": "views\\31883bd4-2591-4115-ae84-867720f41394.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -247,30 +215,6 @@
             }
         },
         {
-            "Key": "a02599ef-b880-4a88-a895-ca11fbdae580",
-            "Value": {
-                "id": "ec56f293-d29b-4132-b609-0bf68df408fa",
-                "resourcePath": "sprites\\sZweihander_woosh\\sZweihander_woosh.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "a624ddfb-bbda-4a46-89c6-57b0437b33f3",
-            "Value": {
-                "id": "3f653df1-344f-4b97-8aba-9e95e48b2332",
-                "resourcePath": "scripts\\swap_weapon\\swap_weapon.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "b9e67281-68e1-47e2-a1ae-0934ca4cc538",
-            "Value": {
-                "id": "efabca35-b6dc-4f14-8de9-3ee3ea6432ad",
-                "resourcePath": "views\\b9e67281-68e1-47e2-a1ae-0934ca4cc538.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "bd19cd9f-a8af-4493-a05d-3c26367da856",
             "Value": {
                 "id": "5eca2f5c-2e76-4ce7-abfa-ee64488dcbe2",
@@ -337,8 +281,7 @@
     ],
     "script_order": [
         "60e965ad-e527-4e71-81a0-4d41f3d62dc8",
-        "5fd6f652-a6b9-4398-a546-dc5877d2ecd9",
-        "a624ddfb-bbda-4a46-89c6-57b0437b33f3"
+        "5fd6f652-a6b9-4398-a546-dc5877d2ecd9"
     ],
     "tutorial": ""
 }
