@@ -15,11 +15,6 @@
 		while(!place_meeting(x,y+sign(vsp),oSolid)) y+=sign(vsp);
 		vsp = 0;
 	}
-	//jump
-	if(place_meeting(x,y+1,oSolid) && key_pressed_w)
-	{
-		vsp += jump_speed;
-	}
 	//moves object
 	x += hsp;
 	y += vsp;
@@ -27,6 +22,41 @@
 #region actions
 #endregion
 #region animations
-	if(hsp != 0 && skeleton_animation_get() != "run") skeleton_animation_set("run");
-	else if(hsp == 0 && skeleton_animation_get() != "idle") skeleton_animation_set("idle");
+	if(place_meeting(x,y+1,oSolid) && key_pressed_w)
+	{
+		animation = PLAYERANIMATIONS.StandingJump;
+		event_user(0);
+	}
+	else if(animation == PLAYERANIMATIONS.StandingInAir)
+	{
+		if(place_meeting(x,y+1,oSolid))
+		{
+			if(hsp == 0)
+			{
+				animation = PLAYERANIMATIONS.Idle;
+				event_user(0);
+			}
+			else
+			{
+				animation = PLAYERANIMATIONS.Walking;
+				event_user(0);
+			}
+		}
+	}
+	if(animation != PLAYERANIMATIONS.StandingJump && animation != PLAYERANIMATIONS.StandingInAir)
+	{
+		if(hsp != 0 && animation != PLAYERANIMATIONS.Walking) 
+		{
+			animation = PLAYERANIMATIONS.Walking;
+			event_user(0);
+		}
+		else if(hsp == 0 && animation != PLAYERANIMATIONS.Idle)
+		{
+			animation = PLAYERANIMATIONS.Idle;
+			event_user(0);
+		}
+	}
+#endregion
+#region conditions
+	if(instance_exists(oDialogue_system)) state = PLAYERSTATE.Dialogue
 #endregion
