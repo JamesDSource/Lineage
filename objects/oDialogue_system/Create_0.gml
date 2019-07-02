@@ -3,3 +3,4 @@ message = "";
 current = ""; 
 draw_x = 0;
 draw_y = 0;
+txtbox = noone;

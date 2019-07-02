@@ -9,8 +9,10 @@ key_a = false;
 key_d = false;
 key_pressed_w = false; 
 key_pressed_e = false
+space_pressed = false;
 mouse_pressed_left = false; 
 
+is_attacking = false;
 
 state = PLAYERSTATE.Free;
 enum PLAYERSTATE 
@@ -35,13 +37,23 @@ ds_map_add(rapier, "attack", "rapier-attack");
 ds_map_add(rapier, "idle", "rapier-idle");
 
 
-animation = PLAYERANIMATIONS.Idle;
-enum PLAYERANIMATIONS
+upper_animation = UPPERPLAYERANIMATIONS.Idle;
+enum UPPERPLAYERANIMATIONS
 {
 	Idle,
 	Walking,
-	StandingJump,
-	StandingInAir
+	Jump,
+	InAir,
+	Attacking
+}
+lower_animation = LOWERPLAYERANIMATIONS.Idle;
+enum LOWERPLAYERANIMATIONS
+{
+	Idle,
+	Walking,
+	Jump,
+	InAir,
+	Attacking
 }
 sprite_index = sPlayer;
 skeleton_animation_clear(1);
@@ -55,3 +67,5 @@ skeleton_animation_mix("leg-run", "lower-idle", 0.1);
 skeleton_animation_mix("lower-idle", "standing-jump", 0.1);
 skeleton_animation_mix("upper-idle", "standing-jump", 0.1);
 skeleton_animation_mix("standing-jump","mid-standing-jump",0.1);
+skeleton_animation_mix("rapier-attack","rapier-idle",0.1);
+skeleton_animation_mix("rapier-idle","rapier-attack",0.1);

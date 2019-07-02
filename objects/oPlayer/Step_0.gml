@@ -3,6 +3,7 @@
 	key_d = keyboard_check(ord("D"));
 	key_pressed_w = keyboard_check_pressed(ord("W"));
 	key_pressed_e = keyboard_check_pressed(ord("E"));
+	space_pressed = keyboard_check_pressed(vk_space);
 	mouse_pressed_left = mouse_check_button_pressed(mb_left);
 #endregion
 #region states

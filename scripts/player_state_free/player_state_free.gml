@@ -20,41 +20,52 @@
 	y += vsp;
 #endregion
 #region actions
-#endregion
-#region animations
-	if(place_meeting(x,y+1,oSolid) && key_pressed_w)
+	if(space_pressed) 
 	{
-		animation = PLAYERANIMATIONS.StandingJump;
+		is_attacking = true;
 		event_user(0);
 	}
-	else if(animation == PLAYERANIMATIONS.StandingInAir)
+#endregion
+#region animations
+	//getting upper animations
+	if(space_pressed) upper_animation = UPPERPLAYERANIMATIONS.Attacking;
+	else if(place_meeting(x,y+1,oSolid) && key_pressed_w) upper_animation = UPPERPLAYERANIMATIONS.Jump;
+	else if(hsp != 0) upper_animation = UPPERPLAYERANIMATIONS.Walking;
+	else upper_animation = UPPERPLAYERANIMATIONS.Idle;
+	//getting lower animations
+	if(place_meeting(x,y+1,oSolid) && key_pressed_w) lower_animation = LOWERPLAYERANIMATIONS.Jump;
+	else if(hsp != 0) lower_animation = LOWERPLAYERANIMATIONS.Walking;
+	else lower_animation = LOWERPLAYERANIMATIONS.Idle; 
+	//setting upper animations
+	if(upper_animation == UPPERPLAYERANIMATIONS.Attacking)
 	{
-		if(place_meeting(x,y+1,oSolid))
-		{
-			if(hsp == 0)
-			{
-				animation = PLAYERANIMATIONS.Idle;
-				event_user(0);
-			}
-			else
-			{
-				animation = PLAYERANIMATIONS.Walking;
-				event_user(0);
-			}
-		}
+		if(equipt = EQUIPT.None) upper_animation = UPPERPLAYERANIMATIONS.Idle;
+		else if(equipt = EQUIPT.Rapier) skeleton_animation_set_ext("rapier-attack",0);
 	}
-	if(animation != PLAYERANIMATIONS.StandingJump && animation != PLAYERANIMATIONS.StandingInAir)
+	else if(upper_animation == UPPERPLAYERANIMATIONS.Jump)
 	{
-		if(hsp != 0 && animation != PLAYERANIMATIONS.Walking) 
-		{
-			animation = PLAYERANIMATIONS.Walking;
-			event_user(0);
-		}
-		else if(hsp == 0 && animation != PLAYERANIMATIONS.Idle)
-		{
-			animation = PLAYERANIMATIONS.Idle;
-			event_user(0);
-		}
+	}
+	else if(upper_animation == UPPERPLAYERANIMATIONS.Walking)
+	{
+		if(equipt = EQUIPT.None) skeleton_animation_set_ext("arm-swing",0);
+		else if(equipt = EQUIPT.Rapier) skeleton_animation_set_ext("rapier-idle",0);
+	}
+	else if(upper_animation == UPPERPLAYERANIMATIONS.Idle)
+	{
+		if(equipt = EQUIPT.None) skeleton_animation_set_ext("arm-swing",0);
+		else if(equipt = EQUIPT.Rapier) skeleton_animation_set_ext("rapier-idle",0);
+	}
+	//setting lower animations
+	if(lower_animation == LOWERPLAYERANIMATIONS.Jump)
+	{
+	}
+	else if(lower_animation == LOWERPLAYERANIMATIONS.Walking)
+	{
+		skeleton_animation_set_ext("leg-run",1);
+	}
+	else if(lower_animation = LOWERPLAYERANIMATIONS.Idle)
+	{
+		skeleton_animation_set_ext("arm-swing",1);
 	}
 #endregion
 #region conditions
