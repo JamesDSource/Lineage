@@ -79,6 +79,22 @@
             }
         },
         {
+            "Key": "10ed5024-59cb-4fba-b1ff-bbbe2d121599",
+            "Value": {
+                "id": "dd661aba-e43b-4598-92e8-51ea2a7a0607",
+                "resourcePath": "sprites\\sTextbox_large\\sTextbox_large.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1aefd0a7-5582-4bea-b801-46834dd1b4d9",
+            "Value": {
+                "id": "01e45be8-c403-4ffe-8192-2707a759bb56",
+                "resourcePath": "sprites\\sTextbox_medium\\sTextbox_medium.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1ce3f2cf-db46-488a-bf69-174b36343a2f",
             "Value": {
                 "id": "36846222-7e56-41b1-b9e2-728e93387b66",
@@ -311,10 +327,34 @@
             }
         },
         {
+            "Key": "ead34ecf-f359-4501-aa56-ea2dce9d8678",
+            "Value": {
+                "id": "ccfab2e2-1d53-4b2b-956c-23de4ad97eb7",
+                "resourcePath": "fonts\\fDialogue\\fDialogue.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "ed4509d1-c716-4624-892b-cdda7b53b0c1",
             "Value": {
                 "id": "26b18f8e-f55e-4337-9449-2f957f32bfb5",
                 "resourcePath": "views\\ed4509d1-c716-4624-892b-cdda7b53b0c1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f0c1df97-7fd3-4f4d-897a-2bf17b5228b7",
+            "Value": {
+                "id": "8cfe9ee9-5786-414a-99e6-b7a8d0fdcf4c",
+                "resourcePath": "sprites\\sTextbox_small\\sTextbox_small.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f3e4ebd9-895f-4f4a-8976-7b334b749730",
+            "Value": {
+                "id": "a762a9e8-d181-4ca3-95b5-9c1549009413",
+                "resourcePath": "views\\f3e4ebd9-895f-4f4a-8976-7b334b749730.yy",
                 "resourceType": "GMFolder"
             }
         },
