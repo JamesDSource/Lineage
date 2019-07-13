@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "5902e015-063c-4987-9def-24c2b2eb92d9",
+            "Value": {
+                "id": "124a1932-2255-4805-9d2c-325d1258ffc7",
+                "resourcePath": "scripts\\create_timer\\create_timer.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5cdbc945-f224-49dc-af14-03e29129d437",
             "Value": {
                 "id": "739fbdba-ddea-4c73-b8d2-a0cee9aeb6cc",
@@ -268,6 +276,22 @@
                 "id": "e656e81f-8a06-482e-bbb3-178849465a91",
                 "resourcePath": "views\\9ddb60a7-919e-4a44-9ed7-fc25bc34ade1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ace1d30e-aecf-4452-a83a-4d8e3be55a81",
+            "Value": {
+                "id": "11867f28-e9b7-4cdb-8db9-37f97ca024d0",
+                "resourcePath": "scripts\\player_state_jump\\player_state_jump.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "bc6fbf6a-3e79-43fd-a70e-13d88aabdf0d",
+            "Value": {
+                "id": "eabc1952-92ff-44e4-8e6d-0e309d25165b",
+                "resourcePath": "objects\\oTimer\\oTimer.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -394,10 +418,12 @@
     "script_order": [
         "60e965ad-e527-4e71-81a0-4d41f3d62dc8",
         "dde610e6-73a0-4753-9e21-ddaec5b02b0d",
+        "ace1d30e-aecf-4452-a83a-4d8e3be55a81",
         "5fd6f652-a6b9-4398-a546-dc5877d2ecd9",
         "cb0fbecf-50a1-4058-9894-057517f3c2c9",
         "1fd85485-bd5d-4be3-acf1-be2e74f1641d",
-        "5cdbc945-f224-49dc-af14-03e29129d437"
+        "5cdbc945-f224-49dc-af14-03e29129d437",
+        "5902e015-063c-4987-9def-24c2b2eb92d9"
     ],
     "tutorial": ""
 }

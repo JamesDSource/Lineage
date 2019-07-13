@@ -1,9 +1,10 @@
-base_movement_speed = 3;
+ base_movement_speed = 3;
 movement_speed = base_movement_speed;
 vsp = 0;
 hsp = 0; 
 grav = global.GRAV;
 jump_speed = -6;
+
 
 key_a = false;
 key_d = false;
@@ -17,8 +18,16 @@ state = PLAYERSTATE.Free;
 enum PLAYERSTATE 
 {
 	Free,
-	Dialogue	
+	Dialogue,
+	Jump
 	
+}
+jump_state = PLAYERJUMPSTATE.Initial;
+enum PLAYERJUMPSTATE
+{
+	Initial,
+	InAir,
+	Land
 }
 equipt = EQUIPT.None;
 enum EQUIPT
@@ -51,7 +60,6 @@ enum LOWERPLAYERANIMATIONS
 {
 	Idle,
 	Walking,
-	Jump,
 	InAir,
 	Attacking
 }

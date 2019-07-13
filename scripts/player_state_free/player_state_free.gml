@@ -1,19 +1,14 @@
 /// @desc player_state_free()
 #region animations
 	//getting upper animations
-	//if(space_pressed) upper_animation = UPPERPLAYERANIMATIONS.Attacking;
 	if(upper_animation != UPPERPLAYERANIMATIONS.Attacking)
 	{
 		if(hsp != 0) upper_animation = UPPERPLAYERANIMATIONS.Walking;
 		else upper_animation = UPPERPLAYERANIMATIONS.Idle;
 	}
 	//getting lower animations
-	if(place_meeting(x,y+1,oSolid) && key_pressed_w) lower_animation = LOWERPLAYERANIMATIONS.Jump;
-	if(lower_animation != LOWERPLAYERANIMATIONS.Jump)
-	{
-		if(hsp != 0) lower_animation = LOWERPLAYERANIMATIONS.Walking;
-		else lower_animation = LOWERPLAYERANIMATIONS.Idle; 
-	}
+	if(hsp != 0) lower_animation = LOWERPLAYERANIMATIONS.Walking;
+	else lower_animation = LOWERPLAYERANIMATIONS.Idle; 
 	//setting upper animations
 	if(upper_current != upper_animation)
 	{
@@ -37,11 +32,7 @@
 	//setting lower animations
 	if(lower_current != lower_animation)
 	{
-		if(lower_animation == LOWERPLAYERANIMATIONS.Jump)
-		{
-			skeleton_animation_set_ext("lower-jump",1);
-		}
-		else if(lower_animation == LOWERPLAYERANIMATIONS.Walking)
+		if(lower_animation == LOWERPLAYERANIMATIONS.Walking)
 		{
 			skeleton_animation_set_ext("lower-run",1);
 		}
@@ -56,7 +47,7 @@
 	//movement
 	hsp = (key_d - key_a) * movement_speed;
 	vsp += grav;
-	if(place_meeting(x,y+1,oSolid) && key_pressed_w) vsp += jump_speed;
+	if(place_meeting(x,y+1,oSolid) && key_pressed_w) state = PLAYERSTATE.Jump; 
 	//horizontal collitions
 	if(place_meeting(x+hsp,y,oSolid))
 	{

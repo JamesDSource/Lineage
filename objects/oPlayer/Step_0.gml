@@ -9,6 +9,7 @@
 #region states
 	if(state == PLAYERSTATE.Free) player_state_free();
 	else if(state == PLAYERSTATE.Dialogue) player_state_dialogue();
+	else if(state == PLAYERSTATE.Jump) player_state_jump(); 
 #endregion 
 if(hsp != 0) image_xscale = sign(hsp);
 
