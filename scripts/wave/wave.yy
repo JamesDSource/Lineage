@@ -1,8 +1,8 @@
 {
-    "id": "5902e015-063c-4987-9def-24c2b2eb92d9",
+    "id": "2f92f01e-2b9e-446b-8582-e4066eab3d3a",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "create_timer",
+    "name": "wave",
     "IsCompatibility": false,
     "IsDnD": false
 }

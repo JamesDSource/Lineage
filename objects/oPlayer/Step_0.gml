@@ -5,6 +5,7 @@
 	key_pressed_e = keyboard_check_pressed(ord("E"));
 	space_pressed = keyboard_check_pressed(vk_space);
 	mouse_pressed_left = mouse_check_button_pressed(mb_left);
+	shift_pressed = keyboard_check_pressed(vk_shift);
 #endregion
 #region states
 	if(state == PLAYERSTATE.Free) player_state_free();

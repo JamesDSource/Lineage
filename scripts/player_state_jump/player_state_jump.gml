@@ -1,6 +1,7 @@
 with(oPlayer)
 {
 	#region jump states and animations
+		//setting states
 		if(jump_state == PLAYERJUMPSTATE.InAir && place_meeting(x,y+1,oSolid))
 		{
 			jump_state = PLAYERJUMPSTATE.Land;
@@ -11,6 +12,8 @@ with(oPlayer)
 			if(place_meeting(x,y+1,oSolid)) jump_state = PLAYERJUMPSTATE.Initial;
 			else jump_state = PLAYERJUMPSTATE.InAir;
 		}
+		player_animate();
+		//setting animations
 	#endregion
 	#region movement and collitions
 		//movement calculations
@@ -19,7 +22,10 @@ with(oPlayer)
 			hsp = 0; 
 			vsp += jump_speed;
 		}
-		if(jump_state == PLAYERJUMPSTATE.InAir) hsp = (key_d - key_a) * movement_speed;
+		if(jump_state == PLAYERJUMPSTATE.InAir)
+		{
+			hsp = (key_d - key_a) * movement_speed; 
+		}
 		vsp += grav; 
 		//horizontal collitions
 		if(place_meeting(x+hsp,y,oSolid))

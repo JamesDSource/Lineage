@@ -1,10 +1,8 @@
- base_movement_speed = 3;
-movement_speed = base_movement_speed;
+movement_speed = 4;
 vsp = 0;
 hsp = 0; 
 grav = global.GRAV;
 jump_speed = -6;
-
 
 key_a = false;
 key_d = false;
@@ -12,7 +10,7 @@ key_pressed_w = false;
 key_pressed_e = false
 space_pressed = false;
 mouse_pressed_left = false; 
-
+shift_pressed = false;
 
 state = PLAYERSTATE.Free;
 enum PLAYERSTATE 

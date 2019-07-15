@@ -9,43 +9,11 @@
 	//getting lower animations
 	if(hsp != 0) lower_animation = LOWERPLAYERANIMATIONS.Walking;
 	else lower_animation = LOWERPLAYERANIMATIONS.Idle; 
-	//setting upper animations
-	if(upper_current != upper_animation)
-	{
-		if(upper_animation == UPPERPLAYERANIMATIONS.Attacking)
-		{
-			if(equipt == EQUIPT.None) upper_animation = UPPERPLAYERANIMATIONS.Idle;
-			else if(equipt == EQUIPT.Rapier) skeleton_animation_set_ext("rapier-attack",0);
-		}
-		else if(upper_animation == UPPERPLAYERANIMATIONS.Walking)
-		{
-			if(equipt == EQUIPT.None) skeleton_animation_set_ext("upper-run",0);
-			else if(equipt == EQUIPT.Rapier) skeleton_animation_set_ext("rapier-idle",0);
-		}
-		else if(upper_animation == UPPERPLAYERANIMATIONS.Idle)
-		{
-			if(equipt == EQUIPT.None) skeleton_animation_set_ext("upper-idle",0);
-			else if(equipt == EQUIPT.Rapier) skeleton_animation_set_ext("rapier-idle",0);
-		}
-		upper_current = upper_animation;
-	}
-	//setting lower animations
-	if(lower_current != lower_animation)
-	{
-		if(lower_animation == LOWERPLAYERANIMATIONS.Walking)
-		{
-			skeleton_animation_set_ext("lower-run",1);
-		}
-		else if(lower_animation = LOWERPLAYERANIMATIONS.Idle)
-		{
-			skeleton_animation_set_ext("lower-idle",1);
-		}
-		lower_current = lower_animation;
-	}
+	player_animate();
 #endregion
 #region movement and collitions
 	//movement
-	hsp = (key_d - key_a) * movement_speed;
+	hsp = (key_d - key_a) * movement_speed; 
 	vsp += grav;
 	if(place_meeting(x,y+1,oSolid) && key_pressed_w) state = PLAYERSTATE.Jump; 
 	//horizontal collitions
@@ -61,10 +29,17 @@
 		vsp = 0;
 	}
 	//moves object
-	x += hsp;
-	y += vsp;
+	x += round(hsp);
+	y += round(vsp);
 #endregion
 #region actions
+	if(upper_animation != UPPERPLAYERANIMATIONS.Attacking && shift_pressed)
+	{
+		upper_animation = UPPERPLAYERANIMATIONS.Attacking; 
+	}
+	else
+	{
+	}
 #endregion
 #region conditions
 	if(instance_exists(oDialogue_system)) state = PLAYERSTATE.Dialogue
